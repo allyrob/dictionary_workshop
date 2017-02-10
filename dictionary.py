@@ -24,8 +24,9 @@ def show_lists():
 def show_specific_lists(specific_store):
     print stores[specific_store]
 
-def add_new_list():
-    pass
+def add_new_list(new_store):
+    stores[new_store]= []
+    print stores
 
 def add_item():
     pass
@@ -43,7 +44,10 @@ def main():
     main_menu()
     show_lists()
     show_specific_lists("target")
-    add_new_list()
+
+    new_store = "Nordstrom"
+    add_new_list(new_store)
+    
     add_item()
     remove_item()
     remove_list()
