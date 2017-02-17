@@ -88,6 +88,25 @@ def sorted_shopping_list(stores, store_name):
     else:
         return "The shopping list %s does not exist" % store_name
 
+
+def parse_input_string(input_string):
+    '''
+    Given an input_string split it on commas and return the cleaned up list
+    of strings.  Each item in the list has whitespace trimmed.
+
+    Arguments:
+      input_string: a string with 0 or more commas separating items
+    Returns:
+      list of strings.
+    '''
+    input_string = input_string.strip()
+    split_input_list = input_string.split(',')
+    items = []
+    for item in split_input_list:
+        items.append(item.strip())
+    return items
+
+
 def main(): 
 
     while True:
