@@ -1,0 +1,38 @@
+class Contact(object):
+    def __init__(self, first_name, last_name, work_number=""):
+        self.first_name = first_name
+        self.last_name = last_name
+        self.mobile_number = ""
+        self.work_number = work_number
+        self.email = ""
+
+    def send_msg(self, message):
+        print "To: %s - %s " % (self.work_number, message)
+
+#contact_brad = Contact("Brad", "Pitt")
+
+#print contact_brad
+
+def main():
+    contact_brad = Contact("Brad", "Pitt")
+    contact_ryan = Contact("Ryan", "Gosling", "415-555-5555")
+    contact_wes = Contact("Wes", "Jones")
+
+    contacts = []
+    contacts.append(contact_brad)
+    contacts.append(contact_ryan)
+    contacts.append(contact_wes)
+
+    for item_contact in contacts:
+        print item_contact.first_name
+        print item_contact.last_name
+        print item_contact.work_number
+        if item_contact.work_number:
+            item_contact.send_msg("New phone, who is this?")
+
+
+
+
+if __name__ == '__main__':
+    main()
+    
